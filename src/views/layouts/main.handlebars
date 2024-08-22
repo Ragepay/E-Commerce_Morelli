@@ -12,29 +12,62 @@
 
     <header>
         <div>
-            <a href=""><img src="Logo" alt="Logo" title="Inicio"></a>
-            <input type="text" placeholder="Buscar productos...">
-            <a href=""><img src="Buscar" alt="Buscar" title="Buscar"></a>
-            <a href=""><img src="Cart" alt="Carrito" title="Carrito de Compras"></a>
+            <a href="" class="logo"><img src="/img/logo.png" alt="Logo" title="Inicio"></a>
+            <div class="header-right">
+                <input type="text" placeholder="Buscar productos...">
+                <a href=""><img src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000" alt="Buscar"
+                        title="Buscar"></a>
+                <a href=""><img src="https://img.icons8.com/?size=100&id=ii6Lr4KivOiE&format=png&color=000000"
+                        alt="Carrito" title="Carrito de Compras"></a>
+            </div>
         </div>
 
         <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Materiales de Construccion</li>
-                <li></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Materiales de Construccion</a></li>
+                <li><a href="">Herramientas</a></li>
+                <li><a href="">Herrameintas Electricas</a></li>
+                <li><a href="">Combos</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
             </ul>
         </nav>
-        <a href=""><img src="Cart" alt="Carrito" title="Carrito de Compras"></a>
     </header>
 
     <main>
         {{{body}}} <!-- Aqui va el contendio que se almacena en la de "views"(son como componentes.-->
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <ul>
+                <li><a href="https://wa.me/5493487512474?text=Hola%2C%20me%20estoy%20comunicando%20desde%20tu%20portafolio.
+                            " target="_blank"><img src="./img/whatsapp.png" alt="WhatsApp Icon"> WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/benjipeyraga/" target="_blank"><img src="./img/instagram.png"
+                            alt="Instagram Icon"> Instagram</a></li>
+                <li><a href="mailto:benjapey99@gmail.com" target="_blank"><img src="./img/email.png" alt="Email Icon">
+                        Email</a></li>
+
+            </ul>
+        </section>
     </main>
 
     <footer>
+        <p>&copy; 2024 Herramientas Morelli</p>
+        <p>_____________________________</p>
+        <br>
+        <p>Última Actualización: 22/8/24</p>
+        <p>Desarrollado por <a href="https://github.com/Ragepay/" target="_blank"> <img src="/img/github.png"
+                    alt="GitHub Icon"></a></p>
 
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -21,4 +21,15 @@ app.get('/carts/:id', (req, res) => {
     });
 });
 
+app.get('/userAdmin/:user/:password', (req, res) => {
+    const { user, password } =req.params
+    if (user == "Ragepay" && password =="Benja992013"){
+        res.render('userAdmin', {
+    });
+    } else{
+        res.status(500).json({ Mensaje: 'Usuario y contraseña Incorrectos. Intente nuevamente.' });
+    }
+    
+});
+
 export default app;
