@@ -1,0 +1,69 @@
+/* VIEW de HOME*/
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.home {
+    margin: 1em;
+    padding: 0.5em;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.boxProducts {
+    display: flex;
+    margin: 1em;
+    padding: 0.5em;
+    gap: 0.6em;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+
+.boxProducts div {
+    gap: 5px;
+    display: flex;
+    border: 1px solid black;
+    margin: 1em;
+    padding: 0.5em;
+    text-align: center;
+    max-width: 250px;
+    flex-direction: column;
+}
+
+.home form {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+}
+
+/* VIEW de HOME*/
+
+/* VIEW de realTimeProducts*/
+.container {
+    display: flex;
+    margin: 1em;
+    padding: 0.5em;
+    gap: 1em;
+    border: 1px solid black;
+}
+
+.boxEvents {
+    margin: 0.1em;
+    text-align: center;
+}
+
+.boxEvents .agregar,
+.eliminar {
+    margin: 1em;
+    padding: 3em;
+    border: 1px solid black;
+}
+
+
+
+
+/* VIEW de realTimeProducts*/
