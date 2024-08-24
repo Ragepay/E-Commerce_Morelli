@@ -1,15 +1,15 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import { __dirname } from './utils.js';
-//  import { Server } from 'socket.io';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 //  Routes
 import productsRoute from './routes/products.router.js';
 import cartsRoute from './routes/cart.router.js';
 import viewsRoute from './routes/views.router.js';
 
-
+dotenv.config();
 const PORT = 8080;
 const app = express();
 
@@ -45,24 +45,3 @@ app.use('/', viewsRoute);
 app.listen(PORT, () => {
     console.log(`Servidor ON, PORT: ${PORT}`);
 });
-
-
-/*
-const socketServer = new Server(httpServer);
-
-socketServer.on('connection', async (socket) => {    // Nombre del evento que queremos conectar, y un socket(callback)
-    console.log("Dispositivos conectados: " + socketServer.engine.clientsCount);  //    Ver los dispositivos conectados.
-    const listaProductos = await productManager.obtenerProductos();
-    socket.emit("home", listaProductos);
-    socket.emit("realTimeProducts", listaProductos);
-    socket.on("newProducto", async (producto) => {
-        await productManager.agregarProducto(producto);
-        socket.emit("realTimeProducts", listaProductos);
-    });
-    socket.on("eliminarProducto", async (id) => {
-        await productManager.eliminarProducto(id);
-        socket.emit("realTimeProducts", listaProductos);
-    });
-
-});
-*/
