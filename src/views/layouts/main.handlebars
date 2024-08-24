@@ -11,6 +11,7 @@
 <body>
 
     <header>
+
         <div>
             <a href="" class="logo"><img src="/img/logo.png" alt="Logo" title="Inicio"></a>
             <div class="header-right">
@@ -20,8 +21,8 @@
                 <a href=""><img src="https://img.icons8.com/?size=100&id=ii6Lr4KivOiE&format=png&color=000000"
                         alt="Carrito" title="Carrito de Compras"></a>
             </div>
-        </div>
 
+        </div>
         <nav>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -46,15 +47,42 @@
 
         <section id="contacto">
             <h2>Contacto</h2>
-            <ul>
-                <li><a href="https://wa.me/5493487512474?text=Hola%2C%20me%20estoy%20comunicando%20desde%20tu%20portafolio.
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><strong>Teléfono:</strong> +54 9 1234 5678</p>
+                    <p><strong>Email:</strong> contacto@ejemplo.com</p>
+                    <p><strong>Ubicación:</strong> Buenos Aires, Argentina</p>
+                    <ul>
+                        <li><a href="https://wa.me/5493487512474?text=Hola%2C%20me%20estoy%20comunicando%20desde%20tu%20portafolio.
                             " target="_blank"><img src="./img/whatsapp.png" alt="WhatsApp Icon"> WhatsApp</a></li>
-                <li><a href="https://www.instagram.com/benjipeyraga/" target="_blank"><img src="./img/instagram.png"
-                            alt="Instagram Icon"> Instagram</a></li>
-                <li><a href="mailto:benjapey99@gmail.com" target="_blank"><img src="./img/email.png" alt="Email Icon">
-                        Email</a></li>
+                        <li><a href="https://www.instagram.com/benjipeyraga/" target="_blank"><img
+                                    src="./img/instagram.png" alt="Instagram Icon"> Instagram</a></li>
+                        <li><a href="mailto:benjapey99@gmail.com" target="_blank"><img src="./img/email.png"
+                                    alt="Email Icon">
+                                Email</a></li>
 
-            </ul>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Formulario de Contacto</h3>
+                    <form action="form.php" method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
         </section>
     </main>
 
