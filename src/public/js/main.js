@@ -6,3 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
         navList.classList.toggle("active");
     });
 });
+
+let currentSlide = 0;
+
+function moveCarousel(direction) {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalSlides = items.length;
+
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+}

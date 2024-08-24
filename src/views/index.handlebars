@@ -1,28 +1,36 @@
-<h1>User Admin</h1>
-<div class="container">
-    <div class="boxProducts"></div>
-    <div class="boxEvents">
-        <div class="agregar">
-            <h2>Agregar Producto</h2>
-            <div class="formulario-add">
-                <label for="add-title"></label>
-                <input id="add-title" type="text" placeholder="Titulo">
-                <input id="add-description" type="text" placeholder="Descripcion">
-                <input id="add-price" type="number" placeholder="Precio">
-                <input id="add-code" type="text" placeholder="Codigo">
-                <input id="add-stock" type="number" placeholder="Stock">
-                <input id="add-category" type="text" placeholder="Categoria">
-                <button id="button-add" onclick="agregarProducto()">Agregar Nuevo Producto</button>
+<div class="home">
+    <h1>Productos</h1>
+    <div>
+        <form id="pagination-form">
+            <div>
+                <label for="limit">Paginacion:</label>
+                <select id="limit" name="limit">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="40">40</option>
+                </select>
             </div>
-        </div>
-        <div class="eliminar">
-            <h2>Eliminar Producto</h2>
-            <div class="formulario-delete">
-                <input id="delete-id" type="text" placeholder="ID Producto a Eliminar">
-                <button id="button-delete" onclick="eliminarProducto()">Eliminar Producto</button>
+            <div>
+                <label for="sort">Sort:</label>
+                <select id="sort" name="sort">
+                    <option value="">Ninguno</option>
+                    <option value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                </select>
             </div>
+            <div class="slider-container">
+                <label for="minPrice">Precio mínimo: $<span id="minPriceValue">0</span></label>
+                <input type="range" id="minPrice" min="0" max="1000" value="0">
+            </div>
+            <div>
+                <button type="submit">Filtrar</button>
+            </div>
+        </form>
+
+        <div id="boxProducts" class="boxProducts"></div>
+        <div id="pagination-controls">
+            <!-- Los botones de paginación se insertarán aquí -->
         </div>
     </div>
 </div>
-
 <script src="./js/index.js"></script>
