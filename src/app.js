@@ -12,7 +12,7 @@ import viewsRoute from './routes/views.router.js';
 dotenv.config();
 const dbUser = process.env.API_USER;
 const dbPassword = process.env.API_PASSWORD;
-const PORT = 8080;
+const PORT = process.env.PORT||8080;
 const app = express();
 
 //  Conectar con MongoDB Atlas base de Datos.
