@@ -10,12 +10,14 @@ import cartsRoute from './routes/cart.router.js';
 import viewsRoute from './routes/views.router.js';
 
 dotenv.config();
+const dbUser = process.env.API_USER;
+const dbPassword = process.env.API_PASSWORD;
 const PORT = 8080;
 const app = express();
 
 //  Conectar con MongoDB Atlas base de Datos.
 const enviroment = async () => {
-    await mongoose.connect('mongodb+srv://Ragepay:wKL1LFxdeeHbuw2z@coderback.vqrxnc2.mongodb.net/?retryWrites=true&w=majority&appName=Coderback',
+    await mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@coderback.vqrxnc2.mongodb.net/?retryWrites=true&w=majority&appName=Coderback`,
         { dbName: 'E-commerce_Morelli' })
         .then(() => {
             console.log("Listo la base de datos")
